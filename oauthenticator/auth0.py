@@ -107,7 +107,7 @@ class Auth0OAuthenticator(OAuthenticator):
         resp_json = json.loads(resp.body.decode('utf8', 'replace'))
 
         return {
-            'name': resp_json["https://app.model-lab.dunnhumby.com/uuid"],
+            'name': resp_json["https://app.model-lab.dunnhumby.com/ml_userid"],
             'auth_state': {'access_token': access_token, 'auth0_user': resp_json},
         }
 
